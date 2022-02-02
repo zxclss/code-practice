@@ -9,7 +9,7 @@ int a[N], b[N];
 
 long long cal_revpair(int l, int r)
 {
-    if (l == r) return 0;
+    if (l >= r) return 0;
     
     int mid = (l + r) >> 1;
     long long cnt = cal_revpair(l, mid) + cal_revpair(mid + 1, r);
